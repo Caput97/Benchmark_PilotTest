@@ -1,0 +1,51 @@
+,ID_Video,Category,Annotator,Question,Answer
+0,8166472@N03_4977206807_49f8b91a19.avi,Outofscope,Davide,Is the girl texting a message with her phone?,There is no mobile phone in the video.
+1,8166472@N03_4977206807_49f8b91a19.avi,Counterfactual,Davide,What would happen if there was an earthquake?,The people should protect themselves by going under the desks
+2,8166472@N03_4977206807_49f8b91a19.avi,Uncertainty,Davide,Is the girl using the computer for the first time?,It's hard to say
+3,8166472@N03_4977206807_49f8b91a19.avi,Uncertainty,Davide,What is the weather like?,It can't be seen what's the weather like outside
+4,8166472@N03_4977206807_49f8b91a19.avi,Sentiment,Davide,How did the girl react to the woman's claim?,She seems to be happy and satisfied
+5,8166472@N03_4977206807_49f8b91a19.avi,Occult entity,Davide,At the end of the video you can see a hand. Who does it belong to?,It probably belongs to the person who is recording the video
+6,8166472@N03_4977206807_49f8b91a19.avi,Entity tracking,Davide,There's a boy who enters the room in the middle of the video. Where does he go?,He walks around the room while reading something
+7,8166472@N03_4977206807_49f8b91a19.avi,Temporal,Davide,Is the girl smiling at the end of the video?,yes
+8,8166472@N03_4977206807_49f8b91a19.avi,Causal,Davide,What happens after the teacher gave the advice to the girl?,The girl succeeds in doing something with the computer
+9,8166472@N03_4977206807_49f8b91a19.avi,Commonsense,Davide,Where is this video set?,The video appears to be set in a school laboratory
+10,8166472@N03_4977206807_49f8b91a19.avi,Implicit,Davide,Is the video recorded by anyone?,Yes
+11,8166472@N03_4977206807_49f8b91a19.avi,Outofscope,Alessandro B.,Are there animals in the class?,"No, there are no animals"
+12,8166472@N03_4977206807_49f8b91a19.avi,Uncertainty,Alessandro B.,What is behind the column,Maybe other desks
+13,8166472@N03_4977206807_49f8b91a19.avi,Sentiment,Alessandro B.,Is the teacher happy?,Yes
+14,8166472@N03_4977206807_49f8b91a19.avi,Occult entity,Alessandro B.,Are there people in the desks on the left?,"Yes, there are"
+15,8166472@N03_4977206807_49f8b91a19.avi,Entity tracking,Alessandro B.,Is the teacher always behind the student?,She moves around
+16,8166472@N03_4977206807_49f8b91a19.avi,Temporal,Alessandro B.,What happens when the teacher explain to the student how to perform the exercise?,The student succeeds
+17,8166472@N03_4977206807_49f8b91a19.avi,Causal,Alessandro B.,Why the kid is smiling at the end of the video?,Because she completed the assignment
+18,8166472@N03_4977206807_49f8b91a19.avi,Commonsense,Alessandro B.,Where are they?,In a computer lab at school
+19,8166472@N03_4977206807_49f8b91a19.avi,Implicit,Alessandro B.,Is a teacher or a student filming the scene?,Probably a teacher
+20,8166472@N03_4977206807_49f8b91a19.avi,Outofscope,Lucia,What is the boy in front of the computer doing?,"It is a girl, not a boy"
+21,8166472@N03_4977206807_49f8b91a19.avi,Counterfactual,Lucia,What would happen if the girl didn't listen to the teacher?,The teacher would not be happy
+22,8166472@N03_4977206807_49f8b91a19.avi,Uncertainty,Lucia,Is the coffee cup full?,Can't say
+23,8166472@N03_4977206807_49f8b91a19.avi,Sentiment,Lucia,Is the student happy?,"Yes, when she succeeds"
+24,8166472@N03_4977206807_49f8b91a19.avi,Occult entity,Lucia,What is behind the column,Other desks
+25,8166472@N03_4977206807_49f8b91a19.avi,Entity tracking,Lucia,What is the teacher pointing to?,The computer screen
+26,8166472@N03_4977206807_49f8b91a19.avi,Temporal,Lucia,Does the computer screen changes at the end of the video?,Yes
+27,8166472@N03_4977206807_49f8b91a19.avi,Causal,Lucia,Why the kid is smiling at the end of the video?,Because she completed the assignment
+28,8166472@N03_4977206807_49f8b91a19.avi,Commonsense,Lucia,What class is the woman teaching?,A computer class
+29,8166472@N03_4977206807_49f8b91a19.avi,Implicit,Lucia,Are they in school?,Yes
+30,8166472@N03_4977206807_49f8b91a19.avi,Outofscope,Giovanni,is the old man holding a cup?,There is no old man
+31,8166472@N03_4977206807_49f8b91a19.avi,Counterfactual,Giovanni,What would happen if someone drops some liquid on the pc?,it would stop working
+32,8166472@N03_4977206807_49f8b91a19.avi,Uncertainty,Giovanni,is the young student working on a web site?,difficult to understand
+33,8166472@N03_4977206807_49f8b91a19.avi,Sentiment,Giovanni,How would you describe the sentiment of the student at the end of the video?,she seems happy
+34,8166472@N03_4977206807_49f8b91a19.avi,Occult entity,Giovanni,what is the color of the t-shirt of the girl sited nearby the young student?,she has a with t-shirt
+35,8166472@N03_4977206807_49f8b91a19.avi,Entity tracking,Giovanni,is the cup position changed between the beginning and the end of the video?,no
+36,8166472@N03_4977206807_49f8b91a19.avi,Temporal,Giovanni,does the teacher give the high 5 before or after pointing to the screen?,after
+37,8166472@N03_4977206807_49f8b91a19.avi,Causal,Giovanni,what is the cause of the girl smiling?,she smiles because she succeded at her task
+38,8166472@N03_4977206807_49f8b91a19.avi,Commonsense,Giovanni,where is located the scene?,probably in a school IT laboratory
+39,8166472@N03_4977206807_49f8b91a19.avi,Implicit,Giovanni,is day time?,yes
+40,8166472@N03_4977206807_49f8b91a19.avi,Outofscope,Alessio,What door does the key around the teacher's neck open?,It cannot be determined from the video.
+41,8166472@N03_4977206807_49f8b91a19.avi,Counterfactual,Alessio,What would have happened if the power had gone out?,The student could not complete the task on the computer.
+42,8166472@N03_4977206807_49f8b91a19.avi,Uncertainty,Alessio,Does the teacher teach computer science?,"It is possible, but there is not enough evidence to state this with certainty."
+43,8166472@N03_4977206807_49f8b91a19.avi,Sentiment,Alessio,Is the girl happy at the end of the video?,Yes.
+44,8166472@N03_4977206807_49f8b91a19.avi,Occult entity,Alessio,Who is the other person talking in the video?,Probably another teacher.
+45,8166472@N03_4977206807_49f8b91a19.avi,Entity tracking,Alessio,Does the teacher move during the video?,Yes.
+46,8166472@N03_4977206807_49f8b91a19.avi,Temporal,Alessio,Is the teacher present at the end of the video?,No.
+47,8166472@N03_4977206807_49f8b91a19.avi,Causal,Alessio,What happens after the teacher praises the student?,The student smiles.
+48,8166472@N03_4977206807_49f8b91a19.avi,Commonsense,Alessio,Is the video filmed in a school?,Yes.
+49,8166472@N03_4977206807_49f8b91a19.avi,Implicit,Alessio,Is the video filmed during the night?,Probably no.
