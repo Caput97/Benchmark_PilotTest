@@ -23,7 +23,7 @@ def create_captionGPT(question, answer):
             {"role": "user", "content": f"Q: {question}\nA: {answer}"}
         ]
     )
-    return response.choices[0].message.content
+    return response['choices'][0]['message']['content']
 
 
 
@@ -38,7 +38,7 @@ def create_foilGPT(caption):
             {"role": "user", "content": f"C: {caption}"}
         ]
     )
-    return response.choices[0].message.content
+    return response['choices'][0]['message']['content']
 
 
 
@@ -46,7 +46,7 @@ print("Loading dataframe...")
 print()
 
 #load the df
-df = pd.read_csv('/home/dtesta/MyProjects/Benchmark_PilotTest/DF_pilot.csv')
+df = pd.read_csv('/home/dtesta/MyProjects/Benchmark_PilotTest/DF_pilot.csv', index_col = 0)
 
 
 print("Dataframe correctly loaded...")
@@ -61,7 +61,6 @@ print()
 
 #GPT generating captions based on Q+A
 for index, row in df.iterrows():
-
     question = row['Question']
     answer = row['Answer']
     caption = create_captionGPT(question, answer)
@@ -81,7 +80,7 @@ print()
 for index, row in df.iterrows():
 
     caption = row['Caption']
-    foil = create_captionGPT(caption)
+    foil = create_foilGPT(caption)
     df.loc[index, 'Foil'] = foil
 
 
@@ -97,10 +96,10 @@ print()
 #clean up noise from caption_outputs
 for index, row in df.iterrows():
 
-    cleaned_caption = re.sub(r'Caption:|"', '', row['Caption'])  
+    cleaned_caption = re.sub(r'Caption:|"|Sentence:|Caption suggestion:', '', row['Caption'])  
     df.loc[index, 'Caption'] = cleaned_caption
 
-    cleaned_foil = re.sub(r'Foil:|"', '', row['Foil'])  
+    cleaned_foil = re.sub(r'Foil:|"|F:', '', row['Foil'])  
     df.loc[index, 'Foil'] = cleaned_foil
 
 print("Outputs correctly cleaned!")
@@ -108,6 +107,6 @@ print()
 
 
 
-df.to_csv('/home/dtesta/MyProjects/Benchmark_PilotTest/DF_pilot_withCaption.csv')
+df.to_csv('/home/dtesta/MyProjects/Benchmark_PilotTest/DF_pilot_withCaptionFoils.csv')
 
 print("Dataframe correctly updated!")
