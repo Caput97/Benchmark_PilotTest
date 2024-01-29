@@ -19,7 +19,7 @@ def create_captionGPT(question, answer):
         engine= deployment_name, # The deployment name you chose when you deployed the GPT-3.5-Turbo or GPT-4 model.
         messages=[
             {"role": "system", "content": f"You are an assistant designed to create declarative sentences." 
-            f"Users will paste in a string of text a question Q and a answer A which are related to a video scene. Given Q and A, you have to create a short sentence that is the caption for the video."},
+            f"Users will paste in a string of text a question Q and an answer A which are related to a video scene. Given Q and A, you have to create a short sentence that is the caption for the video."},
             {"role": "user", "content": f"Q: {question}\nA: {answer}"}
         ]
     )
