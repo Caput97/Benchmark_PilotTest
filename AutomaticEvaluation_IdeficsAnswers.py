@@ -95,9 +95,7 @@ print("All answers correctly checked and saved!")
 print()
 
 
-df.to_csv('/home/dtesta/MyProjects/Benchmark_PilotTest/DF_pilot_withAutomaticEvaluation.csv')
-print("DF correctly saved!")
-print()
+
 
 
 print('Let\'s make a double check between Idefics\' answers and the foils...')
@@ -129,7 +127,9 @@ for index, row in df.iterrows():
 print('Check done!')
 print()
 
-
+df.to_csv('/home/dtesta/MyProjects/Benchmark_PilotTest/DF_pilot_withAutomaticEvaluation.csv')
+print("DF correctly updated!")
+print()
 
 df_acc = evaluation_accuracy(df)
 print("DF with evaluation accuracy correctly created...")
