@@ -19,11 +19,12 @@ def create_captionGPT(question, answer):
         engine= deployment_name, # The deployment name you chose when you deployed the GPT-3.5-Turbo or GPT-4 model.
         messages=[
             {"role": "system", "content": f"You are an assistant designed to create declarative sentences." 
-            f"Users will paste in a string of text a question Q and an answer A which are related to a video scene. Given Q and A, you have to create a short sentence that is the caption for the video."},
+            f"Users will paste in a string of text a question Q and an answer A which are related to a video scene. Based on Q and A, you have to create "
+            f"a sentence that is the caption for the video. Remember: the caption is a declarative sentence but it must be short and can contain only what is said in Q and A!"},
             {"role": "user", "content": f"Q: {question}\nA: {answer}"}
         ]
     )
-    return response['choices'][0]['message']['content']
+    return response.choices[0].message.content
 
 
 
@@ -38,7 +39,7 @@ def create_foilGPT(caption):
             {"role": "user", "content": f"C: {caption}"}
         ]
     )
-    return response['choices'][0]['message']['content']
+    return response.choices[0].message.content
 
 
 
