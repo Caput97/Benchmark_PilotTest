@@ -33,13 +33,48 @@ def create_foilGPT(caption):
     response = openai.ChatCompletion.create(
         engine= deployment_name, # The deployment name you chose when you deployed the GPT-3.5-Turbo or GPT-4 model.
         messages=[
-            {"role": "system", "content": f"You are an assistant designed to create declarative sentences." 
-            f"Users will paste in a string of text a sentence C that is the caption of a video. You have to create a foil that is a minimally different sentence from the caption C such as" 
-            f"it does not describe correctly the video. So, semantically talking, a foil represents the opposite of the caption C "},
+            {"role": "system", "content": f"You are an assistant designed to create foils for video captions." 
+            f"Users will paste in a string of text a sentence C that is the caption of a video. Based on C, you must create only one foil F for that caption. Don't type any other information." 
+            f"Remember: A foil differs from the caption for only one element!"},
             {"role": "user", "content": f"C: {caption}"}
         ]
+        
     )
-    return response.choices[0].message.content
+    output= response
+
+    while output['choices'][0]['finish_reason'] == 'content_filter':
+        response = openai.ChatCompletion.create(
+            engine= deployment_name, # The deployment name you chose when you deployed the GPT-3.5-Turbo or GPT-4 model.
+            messages=[
+                {"role": "system", "content": f"You are an assistant designed to create foils for video captions." 
+                f"Users will paste in a string of text a sentence C that is the caption of a video. Based on C, you must create only one foil F for that caption. Don't type any other information." 
+                f"Remember: A foil differs from the caption for only one element!"
+                #f"Ensure that the generated content is appropriate and follows OpenAI's usage policies."
+                },
+                {"role": "user", "content": f"C: {caption}"}
+            ]
+        
+        )
+        output= response
+
+    
+
+    while not re.findall('^F: .*|^Foil: .*', output['choices'][0]['message']['content']):
+        response = openai.ChatCompletion.create(
+            engine= deployment_name, # The deployment name you chose when you deployed the GPT-3.5-Turbo or GPT-4 model.
+            messages=[
+                {"role": "system", "content": f"You are an assistant designed to create foils for video captions." 
+                f"Users will paste in a string of text a sentence C that is the caption of a video. Based on C, you must create only one foil F for that caption. Don't type any other information." 
+                f"Remember: A foil differs from the caption for only one element!"},
+                {"role": "user", "content": f"C: {caption}"}
+            ]
+        
+        )
+        output= response
+
+
+
+    return output['choices'][0]['message']['content']
 
 
 
@@ -100,7 +135,7 @@ for index, row in df.iterrows():
     cleaned_caption = re.sub(r'Caption:|"|Sentence:|Caption suggestion:', '', row['Caption'])  
     df.loc[index, 'Caption'] = cleaned_caption
 
-    cleaned_foil = re.sub(r'Foil:|"|F:', '', row['Foil'])  
+    cleaned_foil = re.sub(r'\w* foil:|Foil\d*:|"|F:', '', row['Foil'])  
     df.loc[index, 'Foil'] = cleaned_foil
 
 print("Outputs correctly cleaned!")
